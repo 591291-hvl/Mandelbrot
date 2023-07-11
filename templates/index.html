@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Mandelbrot set</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+        <script src="{{url_for('static', filename='javascript/calculate.js')}}" defer></script>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <!-- Real number -->
+                <lable for="real_number:">Real number</lable>
+                <input value="-0.77679088889099" type="number" name="real_number" id="real_number"> 
+                <!-- Imaginary number -->
+                <lable for="imaginary_number:">Imaginary number</lable>
+                <input value="0.135781" type="number" name="imaginary_number" id="imaginary_number"> 
+                <!-- Zoom -->
+                <lable for="zoom:">Zoom</lable>
+                <input min="0" value="2" type="number" name="zoom" id="zoom"> 
+                <!-- Iterations -->
+                <lable for="iterations:">Iterations</lable>
+                <input min="0", value="50" type="number" name="iterations" id="iterations"> 
+                <!-- Calculate -->
+                <button id="button">Calculate</button>
+            </div>
+        </div>
+        <div class="main">
+            <img src="" id="mandlebrot">
+        </div>
+    </body>
+</html>
